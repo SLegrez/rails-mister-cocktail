@@ -1,9 +1,9 @@
 <div class="container">
   <h1>Cocktails list</h1>
   <% @cocktails.each do |cocktail| %>
-  <ul>
-    <%= link_to "#{cocktail.name}", cocktail_path(cocktail[:id]) %> <%= link_to 'Edit', edit_cocktail_path(cocktail[:id]) %> <%= link_to "Delete", cocktail_path(cocktail), method: :delete,  data: { confirm: "Do you really want to delete this fabulous cocktail ?" } %>
-  </ul>
+    <ul>
+      <%= link_to "#{cocktail.name}", cocktail_path(cocktail[:id]) %> <%= link_to 'Edit', edit_cocktail_path(cocktail[:id]) %> <%= link_to "Delete", cocktail_path(cocktail), method: :delete,  data: { confirm: "Do you really want to delete this fabulous cocktail ?" } %>
+    </ul>
   <% end %>
   <button type="button" class="btn btn-warning"><%= link_to 'Create a cocktail', new_cocktail_path %></button>
 </div>
